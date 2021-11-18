@@ -143,16 +143,20 @@ Firstly, we calculate Rank IC of factors that we get from four different machine
 
 In addition, we check the standarlized IC which is called information ratio (IR):
 
-![image](https://user-images.githubusercontent.com/61198794/142371942-61bdd513-c190-47cf-a544-37e4f9e5bb9a.png)
+<div align='center'>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142371942-61bdd513-c190-47cf-a544-37e4f9e5bb9a.png'/>
+</div>
 
 In order to analyze the incremental information of the synthetic factor, we also show the test results after the market value is neutralized.  
 
-![image](https://user-images.githubusercontent.com/61198794/142371978-ccddef53-1c98-41cc-862f-05a346a33376.png)
+<div align='center'>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142371978-ccddef53-1c98-41cc-862f-05a346a33376.png'/>
+</div>
 
 **Rank IC and IR results**
 
 <div align='center'>
-  <img width='300'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135430.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372494-5ee70526-b9e6-4c18-b53b-dc60215077dc.png'/>
 </div>
 
 **There must something wrong in alphanet since it has no correlation with return. After checking the factor data, we find CNN find nothing after learning. All factors of each stock are totally same.** 
@@ -167,16 +171,15 @@ We guess that there are several reasons for this failure：
 **prediction result of Alphanet**
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135443.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372507-36795ce6-e1fa-4d16-9cef-72babdd905b2.png'/>
 </div>
 
 Therefore, in subsequent inspections and backtests, we will no longer test the Alphanet method 
 
 **Cumsum of Rank_IC of each method**
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135500.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372517-9727692a-c97d-400f-833c-34279cbe77f6.png'/>
 </div>
-
 
 **The synthetic factors do not have a pretty well explanation of asset returns. Compared with logistice regression and random forest, CNN has better correlation with asset returns with a highest mean of Rank_IC.**
 
@@ -189,21 +192,21 @@ We also conducted a hierarchical back-testing test. **The stocks are divided int
 The fifth group which the factors value are highest makes a much better performance than other four groups. However, The other four groups are not distinguished obviously.
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135515.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372537-934caebb-cf1e-4b6e-9eeb-ad9b5c1d0512.png'/>
 </div>
 
 #### 2.2 Logistic Regression Hierarchical backtest
 
 The five groups devided by LR do not perform differently.
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135523.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372545-f35e3e2e-aa8a-4bb0-be83-d8c479de107c.png'/>
 </div>
 
 #### 2.3 Random Forest Hierarchical backtest
 
 The five groups devided by RF do not perform differently.
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135530.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372559-a91f50f7-e399-45ef-ade1-f69c842552ee.png'/>
 </div>
 
 ## Net value backtest
@@ -213,13 +216,13 @@ In this part, we make backtest of each maching leaning method and draw the net v
 ### 1. CNN net value backtest
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135539.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372571-74cf018e-7e0f-48cc-8253-07cc9f447664.png'/>
 </div>
 
 ### 2. Logistic regression net value backtest
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135549.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372577-cec82bc2-3c67-46c5-9f4a-b5886e06d622.png'/>
 </div>
 
 ### 3. Random forest net value backtest
@@ -227,7 +230,7 @@ In this part, we make backtest of each maching leaning method and draw the net v
 Ramdom forset cannnot beat IF300 well.
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135604.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372584-4af9e04f-35d1-4990-9925-1cf926e276ad.png'/>
 </div>
 
 We analyze four important indexes which are annualized rate of return, annualized volatility, sharp ratio and maximum drawdown.
@@ -235,5 +238,5 @@ We analyze four important indexes which are annualized rate of return, annualize
 According to those indexed, we can conclude that CNN ,logistic regression and random forest do not perform so well since their sharp ratio are all around or less than 1.
 
 <div align='center'>
-  <img width='600'src='attachment:%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20211118135614.png'/>
+  <img width='500'src='https://user-images.githubusercontent.com/61198794/142372593-37a34542-5889-45cd-b358-a52f31e292f2.png'/>
 </div>
